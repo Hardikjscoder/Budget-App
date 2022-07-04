@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1,
+h2 {
+    font-size: 2.5rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.budget,
+.expenses {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.label {
+    font-size: 1.75rem;
+    margin: .25em 1em;
+}
+
+.input {
+    padding: 5px 1em;
+    margin: 0 1em;
+    width: 100%;
+    font-size: 1.7rem;
+    border-radius: 3px;
+}
+
+.btn {
+    padding: 0.5em;
+    margin: 1em;
+    color: rgb(0, 140, 255);
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    border: 1px solid rgb(0, 140, 255);
+    transition: 500ms all ease;
+}
+
+.btn:hover {
+    background: rgb(0, 140, 255);
+    border: 1px solid rgb(0, 140, 255);
+    color: white;
+}
+
+#calculate {
+    margin-left: 3rem;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
+
+.value-message {
+    background: rgba(255, 0, 0, 0.7);
+    padding: 1em 1.25rem;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    position: relative;
+    display: none;
+}
+
+.value-message::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    border-bottom: 15px solid rgba(255, 0, 0, 0.7);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+#close {
+    display: none;
+    border: 1px solid red;
+    color: red;
+    transition: all 500ms ease;
+}
+
+#close:hover {
+    background: red;
+    color: white;
+}
+
+#reset {
+    border: 1px solid red;
+    color: red;
+    transition: all 500ms ease;
+}
+
+#reset:hover {
+    background: red;
+    color: white;
+}
+
+.display {
+    display: flex;
+    gap: 2rem;
+    width: 30rem;
+    height: 35rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+span {
+    display: block;
+    margin: .5rem;
+}
+
+#budgetInfo,
+#balanceInfo {
+    color: green;
+    font-size: 3rem;
+}
+
+#expenseInfo,
+#debtInfo {
+    color: red;
+    font-size: 3rem;
+}
+
+.expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem 5rem;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.expenses-value-title {
+    display: flex;
+    gap: 1rem;
+}
+
+.expense-div {
+    display: flex;
+    gap: 0rem 5rem;
+    align-items: center;
+}
+
+i {
+    color: red;
+    cursor: pointer;
+}
+
+#expense-title {
+    margin-left: 5rem;
+}
+
+@media (max-width: 990px) {
+    html {
+        font-size: 55%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .display {
+        justify-content: center;
+        height: unset;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 45%;
+    }
+}

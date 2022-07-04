@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App With JavaScript</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Poppins font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <h1 style="padding: 1em;">Budget App</h1>
+    <div class="container">
+        <div class="container-first-div">
+            <!-- Budget -->
+            <div class="budget">
+                <label for="budget" class="label">Please enter your budget</label>
+                <input type="text" id="budget" class="input" style="border:2px solid green;">
+            </div>
+
+            <!-- Expenses -->
+            <div class="expenses">
+                <label for="expenses" class="label">Please enter your expenses amount</label>
+                <input type="text" id="expenses" class="input" style="border: 2px solid red;">
+
+                <label for="expenseTitle" class="label">Please enter your expense</label>
+                <input type="text" class="input" placeholder="Buy a car, etc." style="border: 2px solid red;"
+                    id="expenseTitleInput">
+            </div>
+
+            <!-- Message for empty or -ve values -->
+            <div class="message">
+                <span class="value-message">Values cannot be empty or negative</span>
+                <button class="btn" id="close">OK</button>
+            </div>
+
+            <button class="btn" id="calculate">Calculate</button>
+            <button class="btn" id="reset" onclick="reset()">Reset</button>
+        </div>
+
+        <!-- Display the budget, expense, balance and debt -->
+        <div class="display">
+            <div class="budget-display">
+                <h2>Budget</h2>
+                <span id="budgetInfo">$0</span>
+            </div>
+            <div class="expense-display">
+                <h2>Expenses</h2>
+                <span id="expenseInfo">$0</span>
+            </div>
+            <div class="balance-display">
+                <h2>Balance</h2>
+                <span id="balanceInfo">$0</span>
+            </div>
+            <div class="debt-display">
+                <h2>Debt</h2>
+                <span id="debtInfo">$0</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Expense List -->
+    <div class="expense-list">
+        <div class="expenses-value-title">
+            <h3>Expense Title</h3>
+            <h3>Expense Value</h3>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="index.js"></script>
+</body>
+
+</html>
